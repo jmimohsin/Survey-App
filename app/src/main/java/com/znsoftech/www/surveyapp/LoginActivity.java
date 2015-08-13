@@ -69,7 +69,7 @@ public class LoginActivity extends Activity {
 
         @Override
         protected void onPreExecute(){
-            ProgressDialogClass.show(LoginActivity.this,getString(R.string.loading));
+            ProgressDialogClass.show(LoginActivity.this, getString(R.string.loading));
             jobj=null;
         }
 
@@ -98,6 +98,8 @@ public class LoginActivity extends Activity {
                         i=new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(i);
                         finish();
+                    }else{
+                        ToastClass.showShort(LoginActivity.this, getString(R.string.please_enter_correct_info));
                     }
                 } catch (JSONException e) {
                     Log.e("Json Exception", e.toString());

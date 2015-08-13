@@ -13,4 +13,23 @@
     <string name="enter_correct_password">Enter correct password!</string>
     <string name="error_in_login">Error in login!</string>
     <string name="loading">Loading...</string>
+
+    <string name="action_bar_color">#24862d</string>
+
+    <string name="title_activity_start_survey">StartSurvey</string>
+    <string name="start_survey">Start Survey</string>
+    <string name="logout">Logout</string>
+    <string name="please_enter_correct_info">Please enter correct details!</string>
+
+    <string name="first_name">First Name</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="zipcode">Zipcode</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_id">Email ID</string>
 </resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/add_user_icon"
+        android:layout_marginTop="@dimen/top_margin_for_add_user_icon" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/first_name"
+        android:ems="10"
+        android:maxLength="20"
+        android:id="@+id/editText13"
+        android:textColor="@color/text_color_dark"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_below="@+id/imageButton"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/middle_name"
+        android:ems="10"
+        android:maxLength="20"
+        android:id="@+id/editText14"
+        android:layout_below="@+id/editText13"
+        android:textColor="@color/text_color_dark"
+        android:layout_alignLeft="@+id/editText13"
+        android:layout_alignStart="@+id/editText13" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/last_name"
+        android:ems="10"
+        android:maxLength="20"
+        android:textColor="@color/text_color_dark"
+        android:id="@+id/editText15"
+        android:layout_below="@+id/editText14"
+        android:layout_alignLeft="@+id/editText14"
+        android:layout_alignStart="@+id/editText14" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_id"
+        android:ems="10"
+        android:maxLength="80"
+        android:id="@+id/editText16"
+        android:textColor="@color/text_color_dark"
+        android:layout_below="@+id/editText15"
+        android:layout_alignLeft="@+id/editText15"
+        android:layout_alignStart="@+id/editText15" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:maxLength="13"
+        android:textColor="@color/text_color_dark"
+        android:id="@+id/editText17"
+        android:hint="@string/mobile_number"
+        android:layout_below="@+id/editText16"
+        android:layout_alignLeft="@+id/editText16"
+        android:layout_alignStart="@+id/editText16" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:maxLength="13"
+        android:textColor="@color/text_color_dark"
+        android:id="@+id/editText18"
+        android:hint="@string/phone_number"
+        android:layout_below="@+id/editText17"
+        android:layout_alignLeft="@+id/editText17"
+        android:layout_alignStart="@+id/editText17" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:textColor="@color/text_color_dark"
+        android:layout_below="@+id/editText18"
+        android:layout_alignLeft="@+id/editText18"
+        android:layout_alignStart="@+id/editText18"
+        android:layout_alignRight="@+id/editText18"
+        android:layout_alignEnd="@+id/editText18" />
+</RelativeLayout>

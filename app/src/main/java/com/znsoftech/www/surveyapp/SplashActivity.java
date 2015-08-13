@@ -83,6 +83,11 @@ public class SplashActivity extends Activity {
                         i=new Intent(SplashActivity.this, MainActivity.class);
                         startActivity(i);
                         finish();
+                    }else{
+                        sp.edit().putBoolean("isChecked",false);
+                        i=new Intent(SplashActivity.this, LoginActivity.class);
+                        startActivity(i);
+                        finish();
                     }
                 } catch (JSONException e) {
                     Log.e("Json Exception", e.toString());

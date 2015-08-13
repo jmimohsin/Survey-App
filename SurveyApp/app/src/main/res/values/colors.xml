@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#69ccc5</color>
+    <color name="text_color_dark">#278f40</color>
+    <color name="button_color">#50a06a</color>
+    <color name="white_color">#ffffff</color>
+    <color name="button_color_dark">#24862d</color>
+    <color name="listview_divider_color">#24862d</color>
+</resources>

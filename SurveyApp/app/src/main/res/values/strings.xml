@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SurveyApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="login">Login</string>
+    <string name="user_name">User name</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="enter_correct_user_name">Enter correct user name!</string>
+    <string name="enter_correct_password">Enter correct password!</string>
+    <string name="error_in_login">Error in login!</string>
+    <string name="loading">Loading...</string>
+</resources>

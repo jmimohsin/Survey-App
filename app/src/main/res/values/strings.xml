@@ -32,4 +32,6 @@
     <string name="mobile_number">Mobile Number</string>
     <string name="phone_number">Phone Number</string>
     <string name="email_id">Email ID</string>
+    <string name="next">Next</string>
+    <string name="title_activity_main_start_survey">SurveyApp</string>
 </resources>

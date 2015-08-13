@@ -32,6 +32,10 @@
             android:name=".StartSurvey"
             android:label="@string/title_activity_start_survey" >
         </activity>
+        <activity
+            android:name=".MainStartSurveyActivity"
+            android:label="@string/title_activity_main_start_survey" >
+        </activity>
     </application>
 
 </manifest>

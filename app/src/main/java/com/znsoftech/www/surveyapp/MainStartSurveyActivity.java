@@ -36,7 +36,23 @@ public class MainStartSurveyActivity extends ActionBarActivity {
         final TextView timerText=(TextView)findViewById(R.id.textView5);
 
         total_time=Config.timer;
-        timerText.setText(total_time+"");
+
+        int hours=0,minutes=0,seconds=0;
+        int total=total_time;
+
+        if(total>=60*60) {
+            hours = total / (60 * 60);
+            total=total-hours*60*60;
+        }
+
+        if(total>=60) {
+            minutes = total / 60;
+            total=total-minutes*60;
+        }
+
+        seconds=total;
+
+        timerText.setText(hours+":"+minutes+":"+seconds);
 
         timer=new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {

@@ -67,4 +67,16 @@
         android:layout_below="@+id/editText6"
         android:layout_alignLeft="@+id/editText6"
         android:layout_alignStart="@+id/editText6" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textColor="@color/white_color"
+        android:background="@drawable/button_selector"
+        android:id="@+id/button4"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_below="@+id/editText7"
+        android:layout_alignRight="@+id/editText7"
+        android:layout_alignEnd="@+id/editText7" />
 </RelativeLayout>

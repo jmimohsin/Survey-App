@@ -8,4 +8,5 @@
     <dimen name="margin_eight">8dp</dimen>
     <dimen name="divider_height">1dp</dimen>
     <dimen name="top_margin_for_add_user_icon">20dp</dimen>
+    <dimen name="margin_from_bottom">20dp</dimen>
 </resources>

@@ -1,5 +1,6 @@
 package com.znsoftech.www.surveyapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
@@ -21,11 +22,20 @@ public class StartSurvey extends ActionBarActivity {
         android.support.v7.app.ActionBar bar=getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor(getString(R.string.action_bar_color))));
         bar.setTitle(getString(R.string.app_name));
+
         TextView textView1=(TextView)findViewById(R.id.textView1);
         textView2=(TextView)findViewById(R.id.textView2);
 
         textView1.setText(Config.survey_name);
         textView2.setVisibility(View.INVISIBLE);
+    }
+
+    public void action(View view){
+        if(view.getId()==R.id.button2){
+            Config.timer=0;
+            Intent i=new Intent(StartSurvey.this, MainStartSurveyActivity.class);
+            startActivity(i);
+        }
     }
 
 //    @Override

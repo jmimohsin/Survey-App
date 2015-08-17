@@ -3,8 +3,7 @@
     android:orientation="vertical"
     android:background="@color/bg"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-   >
+    android:layout_height="match_parent">
 
     <ImageButton
         android:layout_width="100dp"
@@ -103,4 +102,16 @@
         android:layout_alignStart="@+id/editText18"
         android:layout_alignRight="@+id/editText18"
         android:layout_alignEnd="@+id/editText18" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:textColor="@color/white_color"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:background="@drawable/button_selector"
+        android:id="@+id/button3"
+        android:layout_below="@+id/spinner"
+        android:layout_alignRight="@+id/spinner"
+        android:layout_alignEnd="@+id/spinner" />
 </RelativeLayout>

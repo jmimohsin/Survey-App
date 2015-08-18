@@ -39,4 +39,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="error_in_photo_capturing">Your device doesn\'t support capturing images!</string>
     <string name="error_in_croping">Your device doesn\'t support the crop action!</string>
+    <string name="gps_settings">GPS Settings</string>
+    <string name="gps_settings_message">GPS is not enabled. Do you want to go to settings menu?</string>
+    <string name="settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_consumer_name">Enter consumer name!</string>
 </resources>

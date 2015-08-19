@@ -18,14 +18,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/top_margin_for_add_user_icon" />
 
-    <EditText
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/editText8"
-        android:minLines="4"
-        android:gravity="left|top"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
         android:layout_below="@+id/textView6"
         android:layout_centerHorizontal="true" />
 
@@ -37,8 +34,8 @@
         android:background="@drawable/button_selector"
         android:id="@+id/button4"
         android:layout_marginTop="@dimen/margin_ten"
-        android:layout_below="@+id/editText8"
-        android:layout_alignRight="@+id/editText8"
-        android:layout_alignEnd="@+id/editText8" />
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignRight="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout" />
 
 </RelativeLayout>

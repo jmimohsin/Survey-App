@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:background="@color/bg"
+        android:paddingBottom="@dimen/margin_from_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Question"
+            android:padding="@dimen/margin_eight"
+            android:textColor="@color/text_color_dark"
+            android:id="@+id/textView6"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/top_margin_for_add_user_icon" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText8"
+            android:minLines="4"
+            android:gravity="left|top"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textColor="@color/white_color"
+            android:background="@drawable/button_selector"
+            android:id="@+id/button4"
+            android:layout_marginTop="@dimen/margin_ten"
+            android:layout_below="@+id/editText8"
+            android:layout_alignRight="@+id/editText8"
+            android:layout_alignEnd="@+id/editText8" />
+
+    </RelativeLayout>
+
+</ScrollView>

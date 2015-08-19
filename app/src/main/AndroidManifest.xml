@@ -39,7 +39,8 @@
         </activity>
         <activity
             android:name=".MainStartSurveyActivity"
-            android:label="@string/title_activity_main_start_survey" >
+            android:label="@string/title_activity_main_start_survey"
+            android:windowSoftInputMode="stateHidden|adjustResize">
         </activity>
     </application>
 

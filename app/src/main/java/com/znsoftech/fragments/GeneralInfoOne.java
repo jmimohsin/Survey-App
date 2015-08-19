@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.app.Fragment;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.znsoftech.utils.Config;
 import com.znsoftech.utils.DBHelper;
@@ -124,9 +123,13 @@ public class GeneralInfoOne extends Fragment {
                 String date = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
 
                 DBHelper dbHelper=new DBHelper(getActivity(),"Survey.db",null,1);
-                dbHelper.insertIntoConsumer(f_name,m_name,l_name,_address,_city,_state,_country,_zipcode,mobile_number,phone_number,spinner_value,photoPath,email_id,date, Config.user_name,latitude,longitude,"");
+                dbHelper.insertIntoConsumer(Integer.parseInt(Config.survey_id),f_name,m_name,l_name,_address,_city,_state,_country,_zipcode,mobile_number,phone_number,spinner_value,photoPath,email_id,date, Config.user_name,latitude,longitude,"");
 
-                ToastClass.showShort(getActivity(),"Done!");
+                Config.DBConsumerId=dbHelper.getConsumerId();
+
+                Fragment fragment=new checkbox_fragment();
+                FragmentManager fragmentManager=getFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment, null).commit();
             }
         });
 
@@ -156,9 +159,11 @@ public class GeneralInfoOne extends Fragment {
         Random generator = new Random();
         int n = 10000;
         n = generator.nextInt(n);
-        String imageName = "Image-"+ n +".jpg";
-        String filePath=myDir+imageName;
-        File file = new File(filePath);
+        String date = new SimpleDateFormat("dd-MM-yyyy  hh:mm:ss").format(new Date());
+        String imageName = "Image-"+ date +"-"+n+".jpg";
+        String filePath=myDir+File.separator+imageName;
+        Log.e("Image Path", filePath);
+        File file = new File(myDir,imageName);
         if (file.exists ())
             file.delete ();
         try {

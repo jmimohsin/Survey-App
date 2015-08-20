@@ -1,5 +1,5 @@
-<form action="survey.php" method="post">
-User Name<input type="text" name="user_id"><br/>
+<form action="question.php" method="post">
+SurveyId<input type="text" name="SurveyId"><br/>
 Password<input type="text" name="password"><br/>
 <input type="submit" />
 </form>

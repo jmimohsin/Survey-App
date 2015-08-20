@@ -8,15 +8,18 @@
         android:orientation="vertical"
         android:background="@color/bg"
         android:layout_width="match_parent"
+        android:paddingBottom="@dimen/margin_from_bottom"
         android:layout_height="match_parent">
 
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Question"
             android:padding="@dimen/margin_eight"
+            android:layout_marginLeft="@dimen/margin_from_bottom"
+            android:layout_marginRight="@dimen/margin_from_bottom"
             android:textColor="@color/text_color_dark"
             android:id="@+id/textView6"
             android:layout_alignParentTop="true"
@@ -29,7 +32,8 @@
             android:id="@+id/linearLayout"
             android:orientation="vertical"
             android:layout_below="@+id/textView6"
-            android:layout_centerHorizontal="true" />
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_alignStart="@+id/textView6"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -40,8 +44,8 @@
             android:id="@+id/next"
             android:layout_marginTop="@dimen/margin_ten"
             android:layout_below="@+id/linearLayout"
-            android:layout_alignRight="@+id/linearLayout"
-            android:layout_alignEnd="@+id/linearLayout" />
+            android:layout_alignRight="@+id/textView6"
+            android:layout_alignEnd="@+id/textView6" />
 
     </RelativeLayout>
 

@@ -7,8 +7,8 @@
     <string name="user_name">User name</string>
     <string name="password">Password</string>
     <string name="remember_me">Remember me</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_main">SurveyApp</string>
     <string name="enter_correct_user_name">Enter correct user name!</string>
     <string name="enter_correct_password">Enter correct password!</string>
     <string name="error_in_login">Error in login!</string>
@@ -45,4 +45,6 @@
     <string name="cancel">Cancel</string>
     <string name="enter_consumer_name">Enter consumer name!</string>
     <string name="no_question_available">No survey question available!</string>
+    <string name="done">Done</string>
+    <string name="thanks">Thanks</string>
 </resources>

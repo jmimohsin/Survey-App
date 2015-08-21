@@ -42,6 +42,10 @@
             android:label="@string/title_activity_main_start_survey"
             android:windowSoftInputMode="stateHidden|adjustResize">
         </activity>
+        <activity
+            android:name=".Thanks"
+            android:label="@string/thanks" >
+        </activity>
     </application>
 
 </manifest>

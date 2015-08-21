@@ -6,18 +6,21 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.znsoftech.fragments.GeneralInfoOne;
 import com.znsoftech.utils.Config;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainStartSurveyActivity extends ActionBarActivity {
 
-    int total_question=5;
-    int question=1;
     int total_time=0;
     Timer timer;
 
@@ -88,9 +91,41 @@ public class MainStartSurveyActivity extends ActionBarActivity {
         }, 1000, 1000);
 
 
-        Fragment fragment=new GeneralInfoOne();
-        FragmentManager fragmentManager=getFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment, null).commit();
+        JSONArray jsonArray=Config.survey_question_array;
+        JSONObject jsonObject= null;
+        Fragment fragment=null;
+
+        if(Config.next_question_index<Config.total_survey_question){
+            try {
+                //get next fragment question details
+                jsonObject = jsonArray.getJSONObject(Config.next_question_index);
+                JSONArray jsonArray1=jsonObject.getJSONArray("options");
+                JSONObject jsonObject1=jsonArray1.getJSONObject(0);
+
+                //get question type and select which fragment will open
+                String question_type_id=jsonObject1.getString("QuestionOptionTypeId");
+                int id=Integer.parseInt(question_type_id);
+                fragment=Config.getQuestionTypeFragment(id);
+
+                //next question
+                Config.survey_question=jsonObject.getString("Question");
+                Config.survey_question_id=jsonObject.getString("SurveyQuestionId");
+
+                //question option(s)
+                Config.survey_option=jsonObject1.getString("QuestionOption");
+                Config.survey_option_id=jsonObject1.getString("QuestionOptionId");
+
+                Config.next_question_index++;
+            } catch (JSONException e) {
+                Log.e("Json Exception", e.toString());
+            }
+        }
+
+        if(fragment!=null){
+            FragmentManager fragmentManager=getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.frameLayout, fragment, null).commit();
+        }
+
     }
 
     @Override
@@ -102,6 +137,7 @@ public class MainStartSurveyActivity extends ActionBarActivity {
     @Override
     public void onBackPressed() {
         timer.cancel();
+        Config.next_question_index=0;
         super.onBackPressed();
     }
 //    @Override
